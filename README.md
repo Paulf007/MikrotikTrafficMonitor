@@ -15,6 +15,8 @@ apt install python3 python3-pip python3-dev
 cd MikrotikTrafficMonitor
 pip3 install -r requirements.txt
 cp MikrotikTrafficMonitor.service /lib/systemd/system
+Edit the config file to match you router 
+nano /opt/MikrotikTrafficMonitor/config/config.yaml
 systemctl enable MikrotikTrafficMonitor
 service MikrotikTrafficMonitor start
 systemctl status MikrotikTrafficMonitor
@@ -26,3 +28,4 @@ You need to go into IP - Accounting and enable Accounting, also enable Web Acces
 type the IP of the machine where this tool will run on.
 
 You may also need to disable fast track as it ignores accounting.
+The Web page will be Available at http://YOURIP:3011
